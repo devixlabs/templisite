@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            {% if title %}
+            <h1 class="mb-4">{{ title }}</h1>
+            {% endif %}
+            
+            {{ content | safe }}
+        </div>
+    </div>
+</div>

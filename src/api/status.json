@@ -1,0 +1,11 @@
+{
+  "status": "online",
+  "timestamp": "2024-01-01T00:00:00Z",
+  "services": {
+    "website": "operational",
+    "api": "operational",
+    "database": "operational"
+  },
+  "uptime": "99.9%",
+  "responseTime": "150ms"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "templisite",
+  "version": "1.0.0",
+  "description": "A reusable boilerplate for creating static websites",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "build:prod": "NODE_ENV=production eleventy",
+    "clean": "rm -rf dist",
+    "deploy:s3": "npm run build:prod && node scripts/deploy-s3.js",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.8",
+    "@11ty/eleventy-plugin-sitemap": "^0.8.0"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.0.0",
+    "mime-types": "^2.1.35"
+  },
+  "keywords": ["11ty", "static-site", "boilerplate", "jamstack"],
+  "author": "Your Name",
+  "license": "MIT"
+}

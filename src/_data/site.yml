@@ -1,0 +1,25 @@
+title: "My Static Site"
+description: "A modern static website built with 11ty"
+url: "https://your-domain.com"
+author: "Your Name"
+email: "your-email@example.com"
+logo: "/assets/images/logo.png"
+favicon: "/favicon.ico"
+lang: "en"
+locale: "en_US"
+
+# Social media
+social:
+  twitter: "yourusername"
+  linkedin: "yourusername"
+  github: "yourusername"
+
+# SEO
+seo:
+  image: "/assets/images/og-image.png"
+  twitter_card: "summary_large_image"
+
+# Features
+features:
+  polling_enabled: true
+  polling_interval: 5000

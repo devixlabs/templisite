@@ -1,0 +1,20 @@
+<footer class="bg-dark text-light py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; {{ '' | currentYear }} {{ site.title }}. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                {% if site.social.twitter %}
+                <a href="https://twitter.com/{{ site.social.twitter }}" class="text-light me-3">Twitter</a>
+                {% endif %}
+                {% if site.social.linkedin %}
+                <a href="https://linkedin.com/in/{{ site.social.linkedin }}" class="text-light me-3">LinkedIn</a>
+                {% endif %}
+                {% if site.social.github %}
+                <a href="https://github.com/{{ site.social.github }}" class="text-light">GitHub</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</footer>
