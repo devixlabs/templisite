@@ -45,6 +45,10 @@ This is an 11ty (Eleventy) static site generator project with Bootstrap 5 and AJ
 
 Uses Nunjucks with Bootstrap 5. Base layout includes conditional polling script loading based on `site.features.polling_enabled` setting in site.yml.
 
+### Testing the Polling System
+
+To test AJAX polling functionality: update JSON files in `src/api/` while the development server is running. The polling system will detect changes and update the UI in real-time.
+
 ### Environment Variables for S3 Deployment
 
 Required: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `S3_BUCKET`, `AWS_REGION`
