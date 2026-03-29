@@ -1,54 +1,49 @@
-# CLAUDE.md
+# Templisite
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+11ty v2 static site boilerplate with Nunjucks, Bootstrap 5, AJAX polling, and S3 deployment.
 
-## Common Development Commands
+## Commands
 
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build for development
-- `npm run build:prod` - Build for production (sets NODE_ENV=production)
-- `npm run clean` - Remove dist/ directory
-- `npm run deploy:s3` - Deploy to AWS S3 (requires environment variables)
+- `npm run dev` — Start dev server with hot reload
+- `npm run build` — Build to `dist/`
+- `npm run build:prod` — Production build (NODE_ENV=production)
+- `npm run clean` — Remove `dist/`
+- `npm run deploy:s3` — Build prod + deploy to S3 (requires AWS env vars)
 
-## Architecture Overview
+## Architecture
 
-This is an 11ty (Eleventy) static site generator project with Bootstrap 5 and AJAX polling capabilities.
+```
+src/
+├── _data/           # site.yml (global config), navigation.yml
+├── _includes/
+│   ├── layouts/     # base.njk (root layout), page.njk
+│   └── partials/    # header.njk, footer.njk, seo.njk
+├── content/         # Markdown pages (index, about, services, contact)
+├── assets/
+│   ├── css/main.css
+│   └── js/main.js, polling.js
+├── api/             # Runtime JSON (status.json, metadata.json) — served with no-cache headers
+└── static/          # favicon.ico, robots.txt — copied as-is
+```
 
-### Key Architecture Components
+- **Config:** `.eleventy.js` — passthrough copies, image shortcode, sitemap plugin, date filters
+- **Output:** `dist/` (gitignored)
+- **Templating:** Nunjucks for both HTML and Markdown
 
-**11ty Configuration (.eleventy.js):**
-- Input: `src/`, Output: `dist/`
-- Uses Nunjucks templating engine for both HTML and Markdown
-- Includes image optimization with automatic WebP conversion
-- Generates sitemap automatically
+## Key Patterns
 
-**Directory Structure:**
-- `src/_data/` - Build-time YAML/JSON data (site.yml contains global config)
-- `src/_includes/` - Reusable templates and layouts (base.njk is main layout)
-- `src/content/` - Markdown pages that become site pages
-- `src/assets/` - CSS, JS, and images (copied to dist/)
-- `src/api/` - Runtime JSON files with no-cache headers for AJAX polling
-- `src/static/` - Static files like favicon, robots.txt
+- Files in `src/api/` get `no-cache` headers during S3 deploy — used for AJAX polling endpoints
+- Image shortcode (`{% image %}`) auto-generates WebP + JPEG at 4 widths (300/600/900/1200)
+- `site.yml` controls global config: site title, URL, social links, polling interval
+- Sitemap hostname in `.eleventy.js` must match `site.yml` URL (currently both placeholder)
 
-**AJAX Polling System:**
-- `src/assets/js/polling.js` provides PollingManager class
-- Polls API endpoints with cache-busting and no-cache headers
-- Configurable intervals, automatic change detection
-- Global `window.polling` instance available
+## Deployment
 
-**Deployment:**
-- S3 deployment script with intelligent cache control
-- API files get no-cache headers, static assets get 1-year cache
-- Requires AWS credentials in environment variables
+Requires env vars: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `S3_BUCKET`, `AWS_REGION`
 
-### Template System
+## Gotchas
 
-Uses Nunjucks with Bootstrap 5. Base layout includes conditional polling script loading based on `site.features.polling_enabled` setting in site.yml.
-
-### Testing the Polling System
-
-To test AJAX polling functionality: update JSON files in `src/api/` while the development server is running. The polling system will detect changes and update the UI in real-time.
-
-### Environment Variables for S3 Deployment
-
-Required: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `S3_BUCKET`, `AWS_REGION`
+- No Makefile — use npm scripts directly
+- `site.yml` and `.eleventy.js` sitemap hostname still have placeholder values (`your-domain.com`)
+- `package.json` author field is still "Your Name"
+- `claude-notes.md` in root has original creation notes from Sonnet 4 (not a CLAUDE.md)
