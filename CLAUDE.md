@@ -46,4 +46,10 @@ Requires env vars: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `S3_BUCKET`, `A
 - No Makefile — use npm scripts directly
 - `site.yml` and `.eleventy.js` sitemap hostname still have placeholder values (`your-domain.com`)
 - `package.json` author field is still "Your Name"
-- `claude-notes.md` in root has original creation notes from Sonnet 4 (not a CLAUDE.md)
+
+## Project Status
+
+- All content is placeholder — no real domain, identity, or copy set yet
+- Phase 1 (Identity & Configuration) is the active work; see `TODO.md` and `TODO_1.md`
+- `docs/todos/ROADMAP.md` has the 5-phase plan; `TODO_N.md` files track atomic work items
+- `docs/decisions/` is the intended location for architectural/hosting decisions
