@@ -1,8 +1,8 @@
-title: "My Static Site"
-description: "A modern static website built with 11ty"
-url: "https://your-domain.com"
-author: "Your Name"
-email: "your-email@example.com"
+title: "Templisite"
+description: "A modern, fast, and feature-rich 11ty static site boilerplate."
+url: "https://templisite.devixlabs.com"
+author: "DevixLabs"
+email: "hello@devixlabs.com"
 logo: "/assets/images/logo.png"
 favicon: "/favicon.ico"
 lang: "en"
@@ -10,9 +10,9 @@ locale: "en_US"
 
 # Social media
 social:
-  twitter: "yourusername"
-  linkedin: "yourusername"
-  github: "yourusername"
+  twitter: "devixlabs"
+  linkedin: "devixlabs"
+  github: "devixlabs"
 
 # SEO
 seo:

@@ -1,6 +1,6 @@
-# Static Site Boilerplate
+# Templisite
 
-A reusable boilerplate for creating static websites with 11ty, Bootstrap, and AJAX polling capabilities.
+A modern, fast, and feature-rich 11ty static site boilerplate designed for production efficiency, complete with Bootstrap 5 and AJAX polling capabilities.
 
 ## Features
 
@@ -18,17 +18,28 @@ A reusable boilerplate for creating static websites with 11ty, Bootstrap, and AJ
 1. **Install dependencies:**
    ```bash
    npm install
-  ```
+   ```
 
 2. **Start development server:**
    ```bash
-   npm run dev
+   make dev
    ```
 
 3. **Build for production:**
    ```bash
-   npm run build:prod
+   make build-prod
    ```
+
+## Available Commands
+
+We use a `Makefile` to simplify common operations:
+
+- `make dev` — Start the development server with live reload.
+- `make build` — Build the static site to the `dist/` folder.
+- `make build-prod` — Build the site for production (applies `NODE_ENV=production`).
+- `make clean` — Remove the `dist/` directory.
+- `make deploy` — Build the production site and deploy to S3.
+- `make help` — Show all available commands.
 
 ## Project Structure
 
@@ -44,12 +55,12 @@ src/
 
 ## Configuration
 
-Edit `src/_data/site.yml` to customize your website:
+Edit `src/_data/site.yml` to customize your website's identity, metadata, and features:
 
 ```yaml
-title: "Your Website Title"
-description: "Your website description"
-url: "https://your-domain.com"
+title: "Templisite"
+description: "A modern, fast, and feature-rich 11ty static site boilerplate."
+url: "https://templisite.devixlabs.com"
 # ... more options
 ```
 
@@ -71,7 +82,7 @@ polling.startPolling('mydata');
 
 ### AWS S3 Deployment
 
-1. Set environment variables:
+1. Set environment variables (e.g., via `.envrc`):
    ```bash
    export AWS_ACCESS_KEY_ID="your-access-key"
    export AWS_SECRET_ACCESS_KEY="your-secret-key"
@@ -79,14 +90,14 @@ polling.startPolling('mydata');
    export AWS_REGION="us-east-1"
    ```
 
-2. Deploy:
+2. Deploy using Make:
    ```bash
-   npm run deploy:s3
+   make deploy
    ```
 
 ### Static Hosting
 
-After running `npm run build:prod`, upload the `dist/` folder to any static hosting service.
+After running `make build-prod`, upload the `dist/` folder to any static hosting service.
 
 ## Development
 

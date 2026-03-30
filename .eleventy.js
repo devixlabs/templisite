@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(sitemap, {
-    hostname: "https://your-domain.com",
+    hostname: "https://templisite.devixlabs.com",
   });
 
   // Copy static files

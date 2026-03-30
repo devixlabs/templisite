@@ -1,7 +1,7 @@
 {
-  "name": "static-site-boilerplate",
+  "name": "templisite",
   "version": "1.0.0",
-  "description": "A reusable boilerplate for creating static websites with 11ty",
+  "description": "A modern, fast, and feature-rich 11ty static site boilerplate",
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
@@ -20,6 +20,6 @@
     "mime-types": "^2.1.35"
   },
   "keywords": ["11ty", "static-site", "boilerplate", "jamstack"],
-  "author": "Your Name",
+  "author": "DevixLabs",
   "license": "MIT"
 }

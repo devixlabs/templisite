@@ -4,11 +4,11 @@ Root task list. See ROADMAP.md for full phase descriptions.
 
 ---
 
-## 1 — Phase 1: Identity & Configuration
+## 1 — Phase 1: Identity & Configuration (Completed)
 
-Replace all placeholder values with real project identity.
+Replaced all placeholder values with real project identity (Templisite).
 
-**Children:** TODO_1 items 1.1, 1.2, 1.3, 1.4, 1.5, 1.6
+**Children:** TODO_1 items 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 - **All Done**
 
 ---
 
