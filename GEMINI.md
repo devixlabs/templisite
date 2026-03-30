@@ -7,6 +7,7 @@ A modern, fast, and feature-rich 11ty static site boilerplate designed for produ
 - **Live Data**: Use `src/api/` for runtime JSON files. These are served with `no-cache` headers (via `scripts/deploy-s3.js`) to support real-time AJAX polling in `src/assets/js/polling.js`.
 - **Image Optimization**: Always use the `{% image %}` shortcode for content images to ensure responsive WebP/JPEG generation.
 - **Surgical Consistency**: Maintain the separation of concerns between `content/` (Markdown), `_includes/` (Templates), and `_data/` (Configuration).
+- **AI Task Tracking**: All roadmap planning and active task lists MUST be tracked in the `docs/todos/` directory (e.g., `docs/todos/ROADMAP.md` and `docs/todos/TODO.md`). This ensures parity and shared context with other AI agents (like Claude).
 
 ## Project Status: 🟢 Active (Phase 1)
 The project is currently in **Phase 1: Identity & Configuration**. The focus is on replacing all placeholder values (`your-domain.com`, `Your Name`) with real project identity before moving to content and design.
@@ -27,7 +28,7 @@ The project is currently in **Phase 1: Identity & Configuration**. The focus is 
 ## Quick Start for Developers
 1. `npm install`
 2. `npm run dev` (Hot-reloading at localhost:8080)
-3. Check `TODO_1.md` for immediate next steps in Phase 1.
+3. Check `docs/todos/TODO.md` for immediate next steps in Phase 2.
 
 ## Identified Improvements
 - [ ] **Asset Relocation**: Move root `logo.png` and `og-image.png` to a new `src/assets/images/` directory.

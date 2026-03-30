@@ -4,15 +4,15 @@ High-level phases for turning this 11ty boilerplate into a production-ready, dep
 
 ## Phase 1: Identity & Configuration
 
-Replace all placeholder values with real project identity.
+Replace all placeholder values with real project identity. (COMPLETED)
 
-- [ ] `src/_data/site.yml` — set real site title, description, URL, author, email, social links
-- [ ] `src/_data/site.yml` — set correct `logo` and `seo.image` paths (or remove if not ready)
-- [ ] `.eleventy.js` — update sitemap `hostname` to match `site.yml` URL
-- [ ] `package.json` — set real `name`, `author`, `description`
-- [ ] `src/static/favicon.ico` — replace with real favicon (or generate one)
-- [ ] `src/static/robots.txt` — review and update sitemap URL if needed
-- [ ] Decide target domain and confirm DNS/hosting plan
+- [x] `src/_data/site.yml` — set real site title, description, URL, author, email, social links
+- [x] `src/_data/site.yml` — set correct `logo` and `seo.image` paths (or remove if not ready)
+- [x] `.eleventy.js` — update sitemap `hostname` to match `site.yml` URL
+- [x] `package.json` — set real `name`, `author`, `description`
+- [x] `src/static/favicon.ico` — replace with real favicon (or generate one)
+- [x] `src/static/robots.txt` — review and update sitemap URL if needed
+- [x] Decide target domain and confirm DNS/hosting plan
 
 ## Phase 2: Content & Design
 

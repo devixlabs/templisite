@@ -48,8 +48,8 @@ Requires env vars: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `S3_BUCKET`, `A
 ## Project Status
 
 - Phase 1 (Identity & Configuration) is **completed**. Real domain (`templisite.devixlabs.com`), authorship, and identity are set.
-- Phase 2 (Content & Design) is the next upcoming phase; see `TODO.md`.
-- `docs/todos/ROADMAP.md` has the 5-phase plan; `TODO_N.md` files track atomic work items (e.g. `TODO_2.md` will be created next).
+- Phase 2 (Content & Design) is the next upcoming phase; see `docs/todos/TODO.md`.
+- `docs/todos/ROADMAP.md` has the 5-phase plan; `TODO_N.md` files track atomic work items (e.g. `docs/todos/TODO_2.md` will be created next).
 - `docs/decisions/` contains architectural/hosting decisions (see `hosting.md`).
 
 ---
@@ -62,3 +62,4 @@ Requires env vars: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `S3_BUCKET`, `A
   - Removed `Gotchas` section (Makefile added, placeholder domains resolved, author field fixed).
   - Updated `Key Patterns` to remove note about placeholders.
   - Updated `Project Status` to indicate Phase 1 completion, deletion of `TODO_1.md`, and that Phase 2 is up next.
+  - Moved `TODO.md` to `docs/todos/TODO.md` and updated references to align with shared AI workflow.
